@@ -24,7 +24,7 @@ const AppHeader = styled.h1`
     align-items: center;
     justify-content: center;
     color: greenyellow;
-    font-size: 24px;
+    font-size: 36px;
 `
 
 export default App;
