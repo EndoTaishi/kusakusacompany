@@ -1,30 +1,21 @@
-import styled from "styled-components"
+import React, { lazy } from "react"
 
-function App() {
+const AppHomeIndex = lazy(() => import("./App/Home/Index.js"))
+
+const App = () => {
   return (
     <>
-      <AppContainer>
-        <AppHeader>
-          草草カンパニー
-        </AppHeader>
-      </AppContainer>
+      <AppRouter />
     </>
-  );
+  )
 }
 
-const AppContainer = styled.div`
-    text-align: center;
-`
-
-const AppHeader = styled.h1`
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: greenyellow;
-    font-size: 36px;
-`
+const AppRouter = () => {
+  return(
+    <>
+      <AppHomeIndex />
+    </>
+  )
+}
 
 export default App;
