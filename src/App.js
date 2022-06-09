@@ -1,4 +1,4 @@
-import React, { lazy } from "react"
+import React, { Suspense, lazy } from "react"
 
 const AppHomeIndex = lazy(() => import("./App/Home/Index.js"))
 
@@ -13,7 +13,9 @@ const App = () => {
 const AppRouter = () => {
   return(
     <>
-      <AppHomeIndex />
+      <Suspense fallback={<></>}>
+        <AppHomeIndex />
+      </Suspense>
     </>
   )
 }
