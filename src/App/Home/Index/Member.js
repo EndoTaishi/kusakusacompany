@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import CeoImage from "./Member/ceo.png"
+import CeoImage from "./Photos/ceo.png"
 
 const Member = () => {
   return (
@@ -33,13 +33,13 @@ const Member = () => {
 }
 
 const MemberWrapper = styled.div`
-    
+    /*何もないよーん*/
 `
 
 const Container = styled.div`
     color: #000000;
     margin: 0 auto;
-    padding: 60px;
+    padding: 20px 60px;
     max-width: 1024px;
     width: 100%;
 
@@ -69,6 +69,8 @@ const FlexContainer = styled.div`
 
 const Profile = styled.div`
     h3{
+        margin: 0;
+        padding-bottom: 10px;
         font-weight: bold;
     }
 

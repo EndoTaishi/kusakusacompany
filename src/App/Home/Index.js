@@ -1,11 +1,13 @@
 import styled from "styled-components"
 
 import Member from "./Index/Member.js";
+import Producs from "./Index/Products.js";
 
 const Index = () => {
   return (
     <>
       <Eyecatch>草草カンパニー</Eyecatch>
+      <Producs />
       <Member />
     </>
   );
