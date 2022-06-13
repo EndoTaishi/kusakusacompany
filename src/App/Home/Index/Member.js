@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const Member = () => {
   return (
-    <Container>
+    <MemberContainer>
       <InnerContainer>
         <h2>OFFICER</h2>
         <FlexContainer>
@@ -20,22 +20,22 @@ const Member = () => {
           </a>
         </FlexContainer>
       </InnerContainer>
-    </Container>
+    </MemberContainer>
   )
 }
 
-const Container = styled.div`
+const MemberContainer = styled.div`
     background-color: #eeeeee;
     padding: 60px;
 `
 
 const InnerContainer = styled.div`
-    color: black;
+    color: white;
     margin: 0 auto;
     width: 100%;
 
     h2 {
-        background-color: red;
+        background-color: #59795A;
         color: white;
         margin-bottom: 30px;
         padding: 20px 60px;
@@ -44,7 +44,7 @@ const InnerContainer = styled.div`
 `
 
 const FlexContainer = styled.div`
-    background-color: aqua;
+    background-color: #59795A;
     display: flex;
     align-items: center;
     height: 270px;
@@ -61,7 +61,7 @@ const Profile = styled.div`
   p {
     margin: 0;
     opacity: 0.7;
-    text-shadow: black 0 0 0.5px;
+    text-shadow: white 0 0 0.5px;
   }
 `
 
