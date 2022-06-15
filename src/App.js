@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from "react"
+import GlobalStyle from "./Styles/GlobalStyle.js"
 
 const AppHomeIndex = lazy(() => import("./App/Home/Index.js"))
 
@@ -13,9 +14,12 @@ const App = () => {
 const AppRouter = () => {
   return(
     <>
-      <Suspense fallback={<></>}>
-        <AppHomeIndex />
-      </Suspense>
+      <GlobalStyle /> 
+      <main>
+        <Suspense fallback={<></>}>
+          <AppHomeIndex />
+        </Suspense>
+      </main>
     </>
   )
 }
