@@ -7,7 +7,6 @@ const Member = () => {
     <MemberWrapper>
         <Container>
             <h2>社長あいさつ</h2>
-            <h3>自己紹介</h3>
             <FlexContainer>
                 <img src={CeoImage} alt="Taishi Endo" />
                 <Profile>
@@ -19,14 +18,6 @@ const Member = () => {
                     <a href="https://twitter.com/endotaishi_" target="_blank" rel="noreferrer">Twitterはこちら</a>
                 </Profile>
             </FlexContainer>
-            <h3>ひとこと</h3>
-            <p>
-                草草カンパニーは、代表社員の遠藤が学業とインターンを最大限両立させるために設立しました。<br />
-                いわゆる"103万円の壁"を超えるためですね。<br />
-                社名の由来は僕の口癖からきています。<br />
-                ところで、口癖が「草」の僕は草タイプに分類されるらしい・・・（ソース：友人）<br />
-                炎上に気をつけて草草カンパニーを育てていきたいと思っています。
-            </p>
         </Container>
     </MemberWrapper>
   )
@@ -34,6 +25,7 @@ const Member = () => {
 
 const MemberWrapper = styled.div`
     /*何もないよーん*/
+    background-color: var(--main-color);
 `
 
 const Container = styled.div`
@@ -44,9 +36,11 @@ const Container = styled.div`
     width: 100%;
 
     h2 {
-        margin: 0;
-        font-size: 32px;
-        font-weight: bold;
+    color: #eeeeee;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding: 20px 60px;
+    text-align: center;
     }
 
     p{
@@ -54,7 +48,6 @@ const Container = styled.div`
     }
 `
 const FlexContainer = styled.div`
-    background-color: #eeeeee;
     display: flex;
     align-items: center;
     /*height: 270px;*/
