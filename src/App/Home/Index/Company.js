@@ -1,49 +1,115 @@
 import styled from "styled-components"
-
-import MottoImage from "./Photos/motto.png"
+import Mixins from "../../../Styles/Mixins.js"
+import Variables from "../../../Variables.js";
 
 const Company = () => {
-    return(
-        <ProductsWrapper>
-            <Container>
-                <h2>COMPANY</h2>
-                <img src={MottoImage} alt="企業理念" />
-                <h3>合同会社草草カンパニーは、「No One Left Behind（誰も取り残されない世界）」を目指して日々躍進し続けます。</h3>
-            </Container>
-        </ProductsWrapper>
-    )
+  return (
+    <CompanyContainer>
+      <CompanyInnerContainer>
+        <h2>COMPANY</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td><strong>会社名</strong></td>
+              <td>合同会社草草カンパニー</td>
+            </tr>
+            <tr>
+              <td><strong>設立日</strong></td>
+              <td>2022年02月21日</td>
+            </tr>
+            <tr>
+              <td><strong>代表者</strong></td>
+              <td>遠藤 大志</td>
+            </tr>
+            <tr>
+              <td><strong>資本金</strong></td>
+              <td>93円</td>
+            </tr>
+            <tr>
+              <td><strong>所在地</strong></td>
+              <td>〒301-0856 茨城県龍ケ崎市貝原塚町3717-1</td>
+            </tr>
+            <tr>
+              <td><strong>従業員</strong></td>
+              <td>1名</td>
+            </tr>
+          </tbody>
+        </table>
+      </CompanyInnerContainer>
+    </CompanyContainer>
+  )
 }
 
-const ProductsWrapper = styled.div`
-    background-color: #ffffff;
-    padding: 40px 60px;
+const CompanyContainer = styled.div`
+  padding: 60px;
+
+  ${Mixins.screenSp} {
+    padding: 0;
+  }
 `
 
-const Container = styled.div`
+const CompanyInnerContainer = styled.div`
+  background-color: var(--background-color-reverse);
+  color: var(--text-color-reverse);
+  max-width: ${Variables.innerContainer};
+  margin: 0 auto;
+  padding: 40px;
+  overflow: scroll;
+  width: 100%;
+
+  ${Mixins.screenSp} {
+    padding: 40px 20px;
+  }
+
+  h2 {
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+
+  table {
     margin: 0 auto;
-    max-width: 1024px;
     width: 100%;
 
-    h2 {
-    background-color: var(--main-color);
-    color: #eeeeee;
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    padding: 20px 60px;
-    text-align: center;
+    * {
+      font-size: 14px;
+      white-space: nowrap;
+
+      ${Mixins.screenSp} {
+        font-size: 12px;
+      }
     }
 
-    img{
-        width: 100%;
-        margin: 30px 0;
+    li {
+      margin: 0;
+      margin-bottom: 15px;
+      list-style: none;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
-    h3{
-        text-align: center;
-        margin: 0;
-        width: 100%;
+    tr {
+      display: flex;
+      border-bottom: 1px solid var(--line-color-light);
+      width: 100%;
+
+      &:first-child {
+        border-top: 1px solid var(--line-color-light);
+      }
     }
+
+    td {
+      min-width: 125px;
+      padding: 20px;
+      padding-left: 2px;
+
+      ${Mixins.screenSp} {
+        min-width: 75px;
+        padding-left: 0;
+      }
+    }
+  }
 `
 
-export default Company;
+export default Company

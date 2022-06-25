@@ -13,7 +13,7 @@ const Member = () => {
         <FlexContainer>
           <img src={CeoImage} alt="taiga.numata" />
           <Profile>
-            <h3>遠藤　大志 / 代表社員</h3>
+            <h3>遠藤 大志 / 代表社員</h3>
             <p>
               早稲田大学在学中<br />
               2000年05月24日生まれ<br />
