@@ -1,5 +1,4 @@
 import React, { Suspense, lazy } from "react"
-import Background from "./Layouts/Background.js"
 import Nomalize from "./Styles/Nomalize.js"
 import GlobalStyle from "./Styles/GlobalStyle.js"
 
@@ -23,7 +22,6 @@ const AppRouter = () => {
           <AppHomeIndex />
         </Suspense>
       </main>
-      <Background />
     </>
   )
 }
