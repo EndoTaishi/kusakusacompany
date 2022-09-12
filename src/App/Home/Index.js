@@ -7,7 +7,7 @@ import Company from "./Index/Company.js";
 const Index = () => {
   return (
     <>
-      <Eyecatch>Kusakusa</Eyecatch>
+      <Eyecatch>Kusakusa LLC</Eyecatch>
       <Member />
       <Company />
     </>
